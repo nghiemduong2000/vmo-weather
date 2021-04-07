@@ -1,0 +1,58 @@
+@import 'style/mixin';
+
+.navbar-wrap {
+  @include respond(phone) {
+    @apply py-4;
+  }
+  @include respond(tablet) {
+    @apply py-6;
+  }
+  @include respond(tablet) {
+    @apply py-8;
+  }
+  .navbar {
+    &__logo {
+      img {
+        @include respond(phone) {
+          @apply w-44;
+        }
+        @include respond(tablet) {
+          @apply w-56;
+        }
+        @include respond(sm-desktop) {
+          @apply w-64;
+        }
+      }
+      span {
+        @include respond(phone) {
+          @apply text-16;
+          @apply ml-1;
+        }
+        @include respond(tablet) {
+          @apply text-18;
+          @apply ml-2;
+        }
+        @include respond(sm-desktop) {
+          @apply text-20;
+        }
+        svg {
+          @include respond(phone) {
+            @apply bottom-3;
+            @apply text-xl;
+            @apply -right-5;
+          }
+          @include respond(tablet) {
+            @apply bottom-4;
+            @apply text-16;
+            @apply -right-6;
+          }
+          @include respond(sm-desktop) {
+            @apply bottom-4;
+            @apply text-16;
+            @apply -right-6;
+          }
+        }
+      }
+    }
+  }
+}

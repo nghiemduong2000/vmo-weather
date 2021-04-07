@@ -1,0 +1,30 @@
+@import 'style/mixin';
+
+.appWrap {
+  @include respond(phone) {
+    @apply pt-48;
+    @apply pb-16;
+    @apply h-full;
+  }
+  @include respond(tablet) {
+    @apply pt-64;
+    @apply h-screen;
+  }
+  @include respond(sm-desktop) {
+    @apply pt-72;
+  }
+  .body {
+    @include respond(phone) {
+      @apply w-35rem;
+    }
+    @include respond(tablet) {
+      @apply w-60rem;
+    }
+    @include respond(sm-desktop) {
+      @apply w-80rem;
+    }
+    @include respond(md-desktop) {
+      @apply w-100rem;
+    }
+  }
+}

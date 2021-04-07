@@ -1,0 +1,12 @@
+@import 'style/mixin';
+
+.title {
+  @include respond(phone) {
+    @apply h-4rem;
+    @apply text-20;
+  }
+  @include respond(tablet) {
+    @apply h-5rem;
+    @apply text-24;
+  }
+}
